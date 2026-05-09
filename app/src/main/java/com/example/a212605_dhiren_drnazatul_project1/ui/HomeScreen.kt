@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.ui
+﻿package com.example.a212605_dhiren_drnazatul_project1.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -18,13 +18,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.a212605_dhiren_drnazatul_lab04.Screen
-import com.example.a212605_dhiren_drnazatul_lab04.datasource.DataSource
-import com.example.a212605_dhiren_drnazatul_lab04.model.FlashDeal
-import com.example.a212605_dhiren_drnazatul_lab04.model.FoodCategory
-import com.example.a212605_dhiren_drnazatul_lab04.model.FoodDeal
+import com.example.a212605_dhiren_drnazatul_project1.Screen
+import com.example.a212605_dhiren_drnazatul_project1.datasource.DataSource
+import com.example.a212605_dhiren_drnazatul_project1.model.FlashDeal
+import com.example.a212605_dhiren_drnazatul_project1.model.FoodCategory
+import com.example.a212605_dhiren_drnazatul_project1.model.FoodDeal
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.a212605_dhiren_drnazatul_lab04.model.CheapMealViewModel
+import com.example.a212605_dhiren_drnazatul_project1.model.CheapMealViewModel
 
 @Composable
 fun HomeScreen(navController: NavController, viewModel: CheapMealViewModel) {
@@ -281,6 +281,12 @@ fun BottomNavBar(navController: NavController, viewModel: CheapMealViewModel) {
             },
             icon = { Icon(Icons.Default.Person, null) },
             label = { Text("Account") }
+        )
+        NavigationBarItem(
+            selected = currentRoute == Screen.DonationBoard.route || currentRoute == Screen.DonationForm.route,
+            onClick = { navController.navigate(Screen.DonationBoard.route) },
+            icon = { Icon(Icons.Default.Favorite, null) },
+            label = { Text("Donate") }
         )
     }
 }

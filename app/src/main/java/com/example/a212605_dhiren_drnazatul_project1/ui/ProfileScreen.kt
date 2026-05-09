@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.ui
+﻿package com.example.a212605_dhiren_drnazatul_project1.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -16,8 +16,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.a212605_dhiren_drnazatul_lab04.model.CheapMealViewModel
-import com.example.a212605_dhiren_drnazatul_lab04.Screen
+import com.example.a212605_dhiren_drnazatul_project1.model.CheapMealViewModel
+import com.example.a212605_dhiren_drnazatul_project1.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

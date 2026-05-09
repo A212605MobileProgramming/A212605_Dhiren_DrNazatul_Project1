@@ -1,10 +1,10 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.example.a212605_dhiren_drnazatul_lab04"
+    namespace = "com.example.a212605_dhiren_drnazatul_project1"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.a212605_dhiren_drnazatul_lab04"
+        applicationId = "com.example.a212605_dhiren_drnazatul_project1"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

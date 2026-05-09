@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.model
+﻿package com.example.a212605_dhiren_drnazatul_project1.model
 
 data class FoodDeal(
     val emoji: String,

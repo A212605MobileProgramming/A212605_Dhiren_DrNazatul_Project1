@@ -1,4 +1,4 @@
-pluginManagement {
+﻿pluginManagement {
     repositories {
         google {
             content {
@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "A212605_Dhiren_DrNazatul_Lab04"
+rootProject.name = "A212605_Dhiren_DrNazatul_Project1"
 include(":app")
  

@@ -1,8 +1,8 @@
-package com.example.a212605_dhiren_drnazatul_lab04.datasource
+﻿package com.example.a212605_dhiren_drnazatul_project1.datasource
 
-import com.example.a212605_dhiren_drnazatul_lab04.model.FlashDeal
-import com.example.a212605_dhiren_drnazatul_lab04.model.FoodCategory
-import com.example.a212605_dhiren_drnazatul_lab04.model.FoodDeal
+import com.example.a212605_dhiren_drnazatul_project1.model.FlashDeal
+import com.example.a212605_dhiren_drnazatul_project1.model.FoodCategory
+import com.example.a212605_dhiren_drnazatul_project1.model.FoodDeal
 
 object DataSource {
 

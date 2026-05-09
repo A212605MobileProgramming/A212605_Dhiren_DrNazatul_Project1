@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.model
+﻿package com.example.a212605_dhiren_drnazatul_project1.model
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,11 +14,12 @@ class CheapMealViewModel : ViewModel() {
     val isProfileSet: Boolean
         get() = _uiState.value.name.isNotEmpty()
 
-    fun updateProfile(name: String, email: String, budgetPerMeal: String, dietaryPreference: String) {
+    fun updateProfile(name: String, email: String,contact: String, budgetPerMeal: String, dietaryPreference: String) {
         _uiState.update {
             it.copy(
                 name = name,
                 email = email,
+                contact = contact,
                 budgetPerMeal = budgetPerMeal,
                 dietaryPreference = dietaryPreference
             )
@@ -30,6 +31,20 @@ class CheapMealViewModel : ViewModel() {
     }
 
     fun resetProfile() {
-        _uiState.update { it.copy(name = "", email = "", budgetPerMeal = "", dietaryPreference = "") }
+        _uiState.update { it.copy(name = "", email = "",contact = "", budgetPerMeal = "", dietaryPreference = "") }
+    }
+
+    fun addDonation(donation: FoodDonation) {
+        _uiState.update { it.copy(donations = it.donations + donation) }
+    }
+
+    fun toggleDonationTaken(id: String) {
+        _uiState.update { state ->
+            state.copy(
+                donations = state.donations.map { d ->
+                    if (d.id == id) d.copy(isTaken = !d.isTaken) else d
+                }
+            )
+        }
     }
 }

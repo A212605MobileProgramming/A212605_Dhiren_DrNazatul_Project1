@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.ui
+﻿package com.example.a212605_dhiren_drnazatul_project1.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.a212605_dhiren_drnazatul_lab04.model.CheapMealViewModel
-import com.example.a212605_dhiren_drnazatul_lab04.Screen
+import com.example.a212605_dhiren_drnazatul_project1.model.CheapMealViewModel
+import com.example.a212605_dhiren_drnazatul_project1.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -19,8 +19,10 @@ fun ProfileSetupScreen(navController: NavController, viewModel: CheapMealViewMod
     val current = viewModel.uiState.value
     var name by remember { mutableStateOf(current.name) }
     var email by remember { mutableStateOf(current.email) }
+    var contact by remember { mutableStateOf(current.contact) }
     var budget by remember { mutableStateOf(current.budgetPerMeal) }
     var dietary by remember { mutableStateOf(current.dietaryPreference) }
+
 
     Scaffold(
         topBar = {
@@ -62,6 +64,13 @@ fun ProfileSetupScreen(navController: NavController, viewModel: CheapMealViewMod
                 singleLine = true
             )
             OutlinedTextField(
+                value = contact,
+                onValueChange = { contact = it },
+                label = { Text("Phone Number") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true
+            )
+            OutlinedTextField(
                 value = budget,
                 onValueChange = { budget = it },
                 label = { Text("Budget Per Meal (e.g. RM 10)") },
@@ -80,7 +89,7 @@ fun ProfileSetupScreen(navController: NavController, viewModel: CheapMealViewMod
 
             Button(
                 onClick = {
-                    viewModel.updateProfile(name, email, budget, dietary)
+                    viewModel.updateProfile(name, email, contact,budget, dietary)
                     navController.navigate(Screen.Profile.route) {
                         popUpTo(Screen.ProfileSetup.route) { inclusive = true }
                     }

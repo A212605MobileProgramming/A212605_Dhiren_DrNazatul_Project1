@@ -1,4 +1,4 @@
-package com.example.a212605_dhiren_drnazatul_lab04.ui
+﻿package com.example.a212605_dhiren_drnazatul_project1.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.*
@@ -15,9 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.a212605_dhiren_drnazatul_lab04.datasource.DataSource
-import com.example.a212605_dhiren_drnazatul_lab04.model.CheapMealViewModel
-import com.example.a212605_dhiren_drnazatul_lab04.model.FoodDeal
+import com.example.a212605_dhiren_drnazatul_project1.datasource.DataSource
+import com.example.a212605_dhiren_drnazatul_project1.model.CheapMealViewModel
+import com.example.a212605_dhiren_drnazatul_project1.model.FoodDeal
 
 private val filterCategories = listOf("All", "Meals", "Dine-In", "Takeaway", "Dessert")
 
