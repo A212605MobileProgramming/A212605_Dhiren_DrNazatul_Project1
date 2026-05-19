@@ -38,6 +38,7 @@ class CheapMealViewModel : ViewModel() {
         _uiState.update { it.copy(donations = it.donations + donation) }
     }
 
+
     fun toggleDonationTaken(id: String) {
         _uiState.update { state ->
             state.copy(

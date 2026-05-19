@@ -16,7 +16,7 @@ import com.example.a212605_dhiren_drnazatul_project1.Screen
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileSetupScreen(navController: NavController, viewModel: CheapMealViewModel) {
-    val current = viewModel.uiState.value
+    val current by viewModel.uiState.collectAsState()
     var name by remember { mutableStateOf(current.name) }
     var email by remember { mutableStateOf(current.email) }
     var contact by remember { mutableStateOf(current.contact) }

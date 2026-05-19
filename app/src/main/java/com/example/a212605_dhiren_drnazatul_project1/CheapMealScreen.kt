@@ -27,24 +27,24 @@ fun CheapMealApp() {
     val navController = rememberNavController()
     val viewModel = viewModel<CheapMealViewModel>()
 
-    NavHost(navController = navController, startDestination = Screen.Home.route) {
+    NavHost(navController, startDestination = Screen.Home.route) {
         composable(Screen.Home.route) {
-            HomeScreen(navController = navController, viewModel = viewModel)
+            HomeScreen(navController, viewModel)
         }
         composable(Screen.Deals.route) {
-            DealsScreen(navController = navController, viewModel = viewModel)
+            DealsScreen(navController, viewModel)
         }
         composable(Screen.ProfileSetup.route) {
-            ProfileSetupScreen(navController = navController, viewModel = viewModel)
+            ProfileSetupScreen(navController, viewModel)
         }
         composable(Screen.Profile.route) {
-            ProfileScreen(navController = navController, viewModel = viewModel)
+            ProfileScreen(navController, viewModel)
         }
         composable(Screen.DonationBoard.route) {
-            DonationBoardScreen(navController = navController, viewModel = viewModel)
+            DonationBoardScreen(navController, viewModel)
         }
         composable(Screen.DonationForm.route) {
-            DonationFormScreen(navController = navController, viewModel = viewModel)
+            DonationFormScreen(navController, viewModel)
         }
     }
 }
